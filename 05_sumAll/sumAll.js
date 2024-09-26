@@ -1,23 +1,28 @@
 //const sumAll = function(num1, num2) {
+
 function sumAll(num1, num2) {
-    //sum = lesser number first
-    let sum = num1;
+    const numRange = [];
+    let numSum = num1;
 
-    //Debugging
-    let round = 0;
-    while (sum <= num2) {
-        console.log(`Current round: ${round}`);
-        round++;
-        console.log(`Current sum: ${sum}`);
+    //Get number range
+    while (numSum <= num2) {
+        //Debugging
+        console.log(`Current array values: ${numRange}`);
+        console.log(`Current numSum value: ${numSum}`);
+        console.log(" ")
 
-        sum = sum + (sum + 1);
+        numRange.push(numSum);
 
-        console.log(`New sum value: ${sum}`);
+        console.log(`New array values: ${numRange}`);
 
-
+        numSum = numSum + 1;
+        
+        //Debugging
+        console.log(`New numSum value: ${numSum}`);
+        console.log(" ")
     }
-
-    return sum;
+        
+    
 };
 
 sumAll(1, 4);
