@@ -4,7 +4,9 @@ const repeatString = function(string, number) {
     if (number === 1) {
         return totalString;
     } else if (number === 0) {
-        return;
+        return "";
+    } else if (number < 0) {
+        return totalString = "ERROR";
     }
 
     //i = 1 since totalString is already given a value. 
