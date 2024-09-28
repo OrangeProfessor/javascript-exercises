@@ -4,6 +4,14 @@ function sumAll(...nums) {
     const numRange = [];
     let smallestNum = Math.min(...nums);
 
+    for (let num in numRange) {
+        if (!Number.isInteger(num) || num < 0) {
+            console.log("ERROR");
+            //return "ERROR";
+            return;
+        }
+    }
+
     /*Use smallest number as starting point and get all numbers between
         the two given argument values */
     while (smallestNum <= Math.max(...nums)) {
@@ -31,7 +39,7 @@ function sumAll(...nums) {
     console.log(`Sum: ${numRange}`);
 };
 
-sumAll(123, 1);
+sumAll(-10, 4);
 
 // Do not edit below this line
 module.exports = sumAll;
