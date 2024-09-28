@@ -39,7 +39,7 @@ const sumAll = function(...nums) {
     }
   
     //console.log(`Sum: ${numRange}`);
-    return numRange;
+    return numRange[0];
 };
 
 sumAll(1, 4);
