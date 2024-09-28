@@ -3,8 +3,6 @@
 function sumAll(num1, num2) {
     const numRange = [];
     let numSum = num1;
-    let takenNum;
-    let newNum
 
     //Get number range
     while (numSum <= num2) {
@@ -25,7 +23,7 @@ function sumAll(num1, num2) {
     }
     
     //Sum all numRange elements
-    for (let i=0; i <= numRange.length; i++) {
+    for (let i=0; i <= numRange[-0]; i++) {
         //Debugging
         console.log(`Current "i" value: ${i}`);
         console.log(`Current numRange[0] value: ${numRange[0]}`);
