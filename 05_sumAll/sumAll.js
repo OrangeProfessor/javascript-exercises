@@ -2,26 +2,20 @@
 
 function sumAll(...nums) {
     const numRange = [];
-    console.log(...nums)
     let smallestNum = Math.min(...nums);
 
-    //Debugging
-    console.log(`Find smallest number: ${Math.min(...nums)}`);
-    console.log(`Find biggest number: ${Math.max(...nums)}`);
-
-    //Use smallest number as starting point and get number range
+    /*Use smallest number as starting point and get all numbers between
+        the two given argument values */
     while (smallestNum <= Math.max(...nums)) {
-        //Debugging
-        //console.log(`Current array values: ${numRange}`);
-        //console.log(`Current numSum value: ${numSum}`);
-        //console.log(" ")
-
         numRange.push(smallestNum);
         smallestNum = smallestNum + 1;
     }
-    
+
+    let arrayLength = numRange.length;
+    console.log(`numRange length: ${arrayLength}`);
+
     //Sum all numRange elements
-    for (let i=0; i <= numRange[-0]; i++) {
+    for (let i=1; i < arrayLength; i++) {
         //Debugging
         console.log(`Current "i" value: ${i}`);
         console.log(`Current numRange[0] value: ${numRange[0]}`);
