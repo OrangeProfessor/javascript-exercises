@@ -1,25 +1,23 @@
 //const sumAll = function(num1, num2) {
 
-function sumAll(num1, num2) {
+function sumAll(...nums) {
     const numRange = [];
-    let numSum = num1;
+    console.log(...nums)
+    let smallestNum = Math.min(...nums);
 
-    //Get number range
-    while (numSum <= num2) {
+    //Debugging
+    console.log(`Find smallest number: ${Math.min(...nums)}`);
+    console.log(`Find biggest number: ${Math.max(...nums)}`);
+
+    //Use smallest number as starting point and get number range
+    while (smallestNum <= Math.max(...nums)) {
         //Debugging
         //console.log(`Current array values: ${numRange}`);
         //console.log(`Current numSum value: ${numSum}`);
         //console.log(" ")
 
-        numRange.push(numSum);
-
-        //console.log(`New array values: ${numRange}`);
-
-        numSum = numSum + 1;
-        
-        //Debugging
-        //console.log(`New numSum value: ${numSum}`);
-        //console.log(" ");
+        numRange.push(smallestNum);
+        smallestNum = smallestNum + 1;
     }
     
     //Sum all numRange elements
@@ -39,7 +37,7 @@ function sumAll(num1, num2) {
     console.log(`Sum: ${numRange}`);
 };
 
-sumAll(1, 4000);
+sumAll(123, 1);
 
 // Do not edit below this line
 module.exports = sumAll;
