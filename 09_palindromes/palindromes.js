@@ -1,6 +1,6 @@
 const palindromes = function (string) {
     //Defines the symbols that should be excluded from string comparisons
-    const unwanted = [" ", ",", "."]
+    const unwanted = [" ", ",", ".", "!"]
 
     string = Array.from(string);
 
@@ -27,7 +27,7 @@ const palindromes = function (string) {
     Having that last return statement alleviated the issue; */
 };
 
-//console.log(palindromes("Animal loots foliated detail of stool lamina."))
+//console.log(palindromes("racecar!"))
 
 // Do not edit below this line
 module.exports = palindromes;
