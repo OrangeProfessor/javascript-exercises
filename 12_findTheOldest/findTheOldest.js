@@ -16,6 +16,14 @@ const set = [
     },
 ]
 
+const set2 = [
+    {
+      name: "Ray",
+      yearOfBirth: 1962,
+      yearOfDeath: 2011,
+    }
+]
+
 const findTheOldest = function(people) {
     people.sort((personA, personB) => {
         if (!personA.yearOfDeath) personA.yearOfDeath = 2024;
@@ -25,8 +33,9 @@ const findTheOldest = function(people) {
         (personB.yearOfDeath - personB.yearOfBirth);
         
     })
-    return people[people.length - 1].name;
+    return people[people.length - 1];
 };
+
 
 /*
 const findTheOldest = function(people) {
@@ -44,6 +53,8 @@ const findTheOldest = function(people) {
 */
 
 //console.log(findTheOldest(set));
+
+//console.log(set2.name);
 
 // Do not edit below this line
 module.exports = findTheOldest;
