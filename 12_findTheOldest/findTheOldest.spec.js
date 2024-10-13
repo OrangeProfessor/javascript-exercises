@@ -18,7 +18,7 @@ describe('findTheOldest', () => {
         yearOfBirth: 1912,
         yearOfDeath: 1941,
       },
-    ]
+    ] 
     expect(findTheOldest(people).name).toBe('Ray');
   });
   test('finds the oldest person if yearOfDeath field is undefined on a non-oldest person', () => {
